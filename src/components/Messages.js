@@ -20,7 +20,7 @@ function Messages({message}) {
     return (
       <div className='msg-owner' ref={ref}>
           <div className="msg-info">
-              <img src={avatar} alt="" />
+              <img src={message.photoURL !== ''? message.photoURL: avatar} alt="" />
               <p className='info-time'>{message.time}</p>
           </div>
   
