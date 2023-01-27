@@ -1,38 +1,272 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body{
+    background-color: #A7BCFE;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hover:hover{
+    cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container{
+    /* border: 1px solid red; */
+    padding: 0px;
+    max-width: 800px;
+    background-color: #3D3C61;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Navbar */
+
+nav{
+    height: 35px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    height: 50px;
+    background-color: #5E5B8E;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+
+.left p{
+    padding-top: 18px;
+    padding-right: 15px;
+}
+
+.right{
+    display: flex;
+    padding-top: 17px;
+    padding-right: 10px;
+    gap: 25px;
+}
+
+img{
+    border: 2px solid green;
+    border-radius: 50%;
+    background-color:#A7BCFE;
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+}
+
+/* Input Field*/
+.input-field{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.input-field-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-right: 5px;
+}
+
+input[type = "text"]{
+    padding: 0px;
+    outline: none;
+    border: none;
+    height: 45px;
+    width: 100%;
+}
+
+input[type = "text"]::placeholder{
+    color: gray;
+}
+
+
+.btn{
+    transition: .3s ease-in;
+    color: white;
+}
+
+.btn:hover{
+    color: #1ca8d6;
+}
+
+
+
+/* Chatbody */
+
+main{
+    background-color: #DDDDF6;
+    color: black;
+    width: 100%;
+    height: 60vh;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.msg-owner{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 15px;
+    padding-right: 10px;
+    padding-top: 5px;
+    gap: 15px;
+}
+
+
+.msg-txt{
+    background-color: white;
+    padding: 5px;
+    margin-top: 6px;
+    border-radius: 10px 0px 10px 10px;
+    text-align: center;
+    height: max-content;
+    max-width: 40%;
+    text-align: center;
+    
+}
+
+.msg-info{
+    /* margin-top: 4px; */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.info-time{
+    color: gray;
+    font-size: 9px;
+    margin-bottom: 0px;
+}
+
+/* Client side message */
+
+.msg-client{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.msg-client-txt{
+    background-color: #1ca8d6;
+    color: white;
+    padding: 5px;
+    margin-top: 6px;
+    border-radius: 0px 10px 10px 10px;
+    text-align: center;
+    height: max-content;
+    max-width: 40%;
+    text-align: center;
+}
+
+/* Sign up */
+.signup-body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.signup-container{
+    background-color: black;
+    color: white;
+    max-width: 650px;
+    display: flex;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    /* justify-content: space-between; */
+}
+
+.su-img{
+    border-radius: 0px;
+    height: 100%;
+    width: 100%; 
+    object-fit: cover;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.su-right{
+    background-color: black;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.su-right input{
+    width: 100%;
+    margin-bottom: 10px;
+    color: white;
+    outline: none;
+    border: none;
+    background-color: black;
+    border-bottom: 0.05px solid gray;
+}
+
+.su-right input::placeholder{
+    color: gray;
+}
+
+.su-btn{
+    text-align: center;
+    padding: 5px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    width: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.su-right label{
+    margin: 10px 0px;
+    font-size: small;
+}
+
+.su-right label:hover{
+    cursor: pointer;
+}
+
+.su-right p{
+    font-size: smaller;
+    color: gray;
 }
