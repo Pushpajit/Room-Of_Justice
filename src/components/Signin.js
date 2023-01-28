@@ -14,13 +14,13 @@ function Signin() {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
-                const user = userCredential.user;
+                // const user = userCredential.user;
                 // After successfull login navigate to home(chat main body)
                 navigate('/')
                 // ...
             })
             .catch((error) => {
-                const errorCode = error.code;
+                // const errorCode = error.code;
                 const errorMessage = error.message;
                 alert(errorMessage)
             });
@@ -31,7 +31,7 @@ function Signin() {
         <div className='signup-body'>
             <div className="signup-container" style={{height: "450px"}}>
                 <div className="su-left">
-                    <img className='su-img' src="https://images.wallpaperscraft.com/image/single/man_mask_sword_210017_720x1280.jpg" alt="" />
+                    <img className='su-img' style={{width: "150px"}} src="https://images.wallpaperscraft.com/image/single/man_mask_sword_210017_720x1280.jpg" alt="" />
                 </div>
 
                 <div className="su-right">

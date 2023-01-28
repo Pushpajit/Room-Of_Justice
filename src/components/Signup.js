@@ -55,7 +55,7 @@ function Signup() {
     <div className='signup-body'>
       <div className="signup-container">
         <div className="su-left">
-          <img className='su-img' src="https://images.wallpaperscraft.com/image/single/man_mask_sword_210017_720x1280.jpg" alt="" />
+          <img className='su-img' style={{width: "150px"}} src="https://images.wallpaperscraft.com/image/single/man_mask_sword_210017_720x1280.jpg" alt="" />
         </div>
 
         <div className="su-right">

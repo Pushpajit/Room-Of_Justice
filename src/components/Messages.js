@@ -5,8 +5,6 @@ import { useEffect, useRef } from 'react'
 
 function Messages({message}) {
 
-  
-  
   // For a scrolling behavior to the current msg.
   const ref = useRef();
   useEffect(() => {
