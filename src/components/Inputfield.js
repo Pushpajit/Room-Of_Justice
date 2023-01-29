@@ -1,26 +1,28 @@
 import React from 'react'
 import auth from '../firebase-config'
 import { db } from '../firebase-config'
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
+import { arrayUnion, doc, updateDoc } from 'firebase/firestore'
 
 function Inputfield() {
     
     const [message, setMessage] = React.useState("");
 
-    const chatRef = collection(db, 'chats');
-    const date = new Date()
+    const chatRef = doc(db, 'chats', 'allChats');
     
-     function handle(event){
+    function handle(event){
 
-      // Adding data to cloud firesttore .
-       addDoc(chatRef, {
-        user: auth.currentUser.displayName,
-        userID: auth.currentUser.uid,
+      const date = new Date()
+
+      const data = {
         photoURL: auth.currentUser.photoURL,
-        createAT: serverTimestamp(),
         text: message,
-        time: date.toLocaleTimeString()
-      })
+        time: date.toLocaleTimeString(),
+        userID: auth.currentUser.uid,
+        username: auth.currentUser.displayName
+      }
+
+      // Appending data to cloud firestore .
+       updateDoc(chatRef, {msginfo: arrayUnion(data)})
 
       // After adding the doc into cloud firestore, empty out the messages.
       setMessage("")

@@ -34,7 +34,7 @@ function Messages({message}) {
       <div className='msg-client' ref={ref}>
           <div className="msg-info">
               <img src={ message.photoURL !== ''? message.photoURL: avatar} alt="" />
-              <p className='info-time' style={{color:"black", fontSize:"10px", fontWeight:"500"}}>{message.user}</p>
+              <p className='info-time' style={{color:"black", fontSize:"10px", fontWeight:"500"}}>{message.username}</p>
               <p className='info-time'>{message.time}</p>
           </div>
   
