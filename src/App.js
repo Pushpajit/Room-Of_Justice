@@ -14,7 +14,6 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
 
 // Home Component, need to separate this in another react conponent.
 function Home({ user}) {
-  
   if(user == null){
     return(
       <>

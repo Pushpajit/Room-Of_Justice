@@ -33,7 +33,6 @@ function Chatbody() {
   }, [])
 
 
-
   // Creating chat array for rendering.
   let chats = [] 
   chatData.forEach((item, ind) => {

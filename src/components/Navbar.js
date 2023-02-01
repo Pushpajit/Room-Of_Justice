@@ -20,7 +20,7 @@ const navigate = useNavigate()
   return (
     <nav>
       <div className="left">
-        <img className="hover" src={props.image !== '' ? props.image : avatar} alt="" />
+        <img className="profile-img hover" src={props.image ? props.image : avatar} alt="" />
         <p>{props.username}</p>
         <span onClick={handle} style={{color:"#242424", fontWeight:"600"}} className='hover'><i className="fa-sharp fa-solid fa-right-from-bracket"></i> Logout</span>
       </div>
